@@ -1,0 +1,23 @@
+{
+    "name": "ac-overrides",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/google.com.css",
+    "scripts": {
+        "build": "npm run clean && npm run build:css",
+        "build:css": "node-sass --recursive --output dist --source-map true --source-map-contents src",
+        "clean": "rimraf dist/*.css dist/*.map",
+        "start": "npm run build && run-p watch:css server",
+        "server": "live-server --port=8888 --no-browser --ignore=*.map ./dist",
+        "watch": "npm run build && npm run watch:css",
+        "watch:css": "npm run build:css -- --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "devDependencies": {
+        "live-server": "^1.2.0",
+        "node-sass": "^4.5.3",
+        "npm-run-all": "^4.0.2",
+        "rimraf": "^2.6.1"
+    }
+}

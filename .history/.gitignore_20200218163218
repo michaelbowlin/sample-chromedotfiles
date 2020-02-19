@@ -1,0 +1,16 @@
+# Dist
+dist/*.css
+dist/*.map
+
+# OS generated files #
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Node Files #
+node_modules
+
+# IDE #
+.idea
+*.swp
